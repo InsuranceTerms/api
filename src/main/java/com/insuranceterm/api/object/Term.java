@@ -30,7 +30,7 @@ public class Term {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @Column(name = "definition", nullable = false)
+    @Column(name = "definition", nullable = false, length = 4000)
     private String definition;
 
     @OneToMany(targetEntity = TestOutcome.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
